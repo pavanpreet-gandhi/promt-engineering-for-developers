@@ -27,3 +27,13 @@
     - Break down and specify the speficic steps required to complete the task.
     - Instruct the model to double check itself before rushing to a conclusion ( this is a good way to prevent hallucinations).
 - **Limitations:** The main limitation of LLMs is that they are prone to hallucinations (making up information that isn't real).
+
+## Iterative Prompt Development
+- The key to being a good prompt enginner is to have a good process for iteratively improving prompts.
+- **Iterative process:**
+    - Try something
+    - Analyze where the result does not give you what you want
+    - Clarify instructions and/or give the model more time to think
+- In larger scale projects, it could be useful to test a prompts structure on multiple variations (for example with multiple different fact sheets).
+
+## Summarizing
