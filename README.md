@@ -37,3 +37,7 @@
 - In larger scale projects, it could be useful to test a prompts structure on multiple variations (for example with multiple different fact sheets).
 
 ## Summarizing
+- Summaries can be general or tailored to a specific context (e.g the recipient of the summary).
+- Using the keyword *extract* instead of *summarize* gives us only contextually relevant information.
+- Summarizing is a powerful way to quickly distill large amounts of information (e.g many product reviews).
+
