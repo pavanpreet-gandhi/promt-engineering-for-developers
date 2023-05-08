@@ -41,3 +41,13 @@
 - Using the keyword *extract* instead of *summarize* gives us only contextually relevant information.
 - Summarizing is a powerful way to quickly distill large amounts of information (e.g many product reviews).
 
+## Inferring
+- The model takes the text as input and performs some analysis. This could include
+    - Identifying sentiment (positive or negative)
+    - Extracting/flagging emotions
+    - Extracting/flagging topics
+    - Extracting particular information (e.g brand, product name)
+    - Extracting names
+    - And more!
+- This approach is known as **zero-shot learning**, and is often much faster than training a model from scratch.
+- With zero-shot learning, we can build multiple systems to make inferences from text in a matter of minutes - something that would have previously taken weeks for a skilled ML developer.
