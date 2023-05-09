@@ -51,3 +51,9 @@
     - And more!
 - This approach is known as **zero-shot learning**, and is often much faster than training a model from scratch.
 - With zero-shot learning, we can build multiple systems to make inferences from text in a matter of minutes - something that would have previously taken weeks for a skilled ML developer.
+
+## Transforming
+- **Language translation and identification:** LLMs can be used as universal translators.
+- **Spelling and grammar correction:** useful for proofreading and correcting text.
+- **Tone adjustment:** e.g slang to casual to business tones etc.
+- **Format conversion:** e.g `JSON` to `HTML` to `Markdown` etc.
