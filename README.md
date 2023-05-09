@@ -2,33 +2,35 @@
 
 **Course link:** [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
 
-## Introduction
+## Notes
+
+### Introduction
 - A lot of the powerful applications of LLMs can be achieved through API calls.
 - There are two types of LLMs:
     - **Base LLMs** (e.g GPT-4)
-        - These predict the next word based on the training data.
+        - These **predict the next word** based on the training data.
         - They are essentially highy advanced autocompletes.
         - They are trained on extremely large amounts of data (think all documented human knowledge).
     - **Instruction tuned LLMs** (e.g ChatGPT)
-        - These try to follow instructions rather than just predict the next word.
+        - These **try to follow instructions** rather than just predict the next word.
         - To train this, you would start with a base LLM and train it further using *good* instruction-answer pairs.
         - You could also further fine tune it using reinforcement learning with human feedback (RLHF).
         - They can be trained to be helpful, honest, and harmless. This makes them more practical for real world applications.
 - In this course we learn how to effectively interact with instruction tuned LLMs.
 - It is useful to think of an LLM as a person, so be clear and specific when talking to it.
 
-## Guidelines for Prompting
-- **Write clear and specific instructions:**
-    - Use delimiters (e.g ``, "", < >, `<tag> </tag>`, `:`) to clearly indicate distinct parts of the input.
-    - Ask for a structured output (e.g `JSON`, `HTML`, custom structure).
-    - Ask the model to check whether initial conditions are satisfied.
-    - Give it a few sample promt-response pairs, this is known as few-shot prompting.
-- **Give the model time to think:**
-    - Break down and specify the speficic steps required to complete the task.
-    - Instruct the model to double check itself before rushing to a conclusion ( this is a good way to prevent hallucinations).
+### Guidelines for Prompting
+- Write **clear and specific** instructions:
+    - Use **delimiters** (e.g ``, "", < >, `<tag> </tag>`, `:`) to clearly indicate distinct parts of the input.
+    - Ask for a **structured output** (e.g `JSON`, `HTML`, custom structure).
+    - Ask the model to check whether **initial conditions** are satisfied.
+    - Give it a few sample promt-response pairs, this is known as **few-shot prompting**.
+- Give the model **time to think**:
+    - Break down and specify the speficic **steps** required to complete the task.
+    - Instruct the model to **double check** itself before rushing to a conclusion (this is a good way to prevent hallucinations).
 - **Limitations:** The main limitation of LLMs is that they are prone to hallucinations (making up information that isn't real).
 
-## Iterative Prompt Development
+### Iterative Prompt Development
 - The key to being a good prompt enginner is to have a good process for iteratively improving prompts.
 - **Iterative process:**
     - Try something
@@ -36,24 +38,31 @@
     - Clarify instructions and/or give the model more time to think
 - In larger scale projects, it could be useful to test a prompts structure on multiple variations (for example with multiple different fact sheets).
 
-## Summarizing
-- Summaries can be general or tailored to a specific context (e.g the recipient of the summary).
+### Summarizing
+- Summaries can be **general** or tailored to a specific **context** (e.g the recipient of the summary).
 - Using the keyword *extract* instead of *summarize* gives us only contextually relevant information.
 - Summarizing is a powerful way to quickly distill large amounts of information (e.g many product reviews).
 
-## Inferring
+### Inferring
 - The model takes the text as input and performs some analysis. This could include
-    - Identifying sentiment (positive or negative)
-    - Extracting/flagging emotions
-    - Extracting/flagging topics
-    - Extracting particular information (e.g brand, product name)
-    - Extracting names
+    - Identifying **sentiment** (positive or negative)
+    - Extracting/flagging **emotions**
+    - Extracting/flagging **topics**
+    - Extracting particular **information** (e.g brand, product name)
     - And more!
 - This approach is known as **zero-shot learning**, and is often much faster than training a model from scratch.
 - With zero-shot learning, we can build multiple systems to make inferences from text in a matter of minutes - something that would have previously taken weeks for a skilled ML developer.
 
-## Transforming
+### Transforming
 - **Language translation and identification:** LLMs can be used as universal translators.
 - **Spelling and grammar correction:** useful for proofreading and correcting text.
 - **Tone adjustment:** e.g slang to casual to business tones etc.
 - **Format conversion:** e.g `JSON` to `HTML` to `Markdown` etc.
+
+### Expanding
+- Expanding a shorter piece of text (e.g bullet points) into a long one (e.g an email or an essay).
+- When using these capabilities on a large scale, make it clear that the text was generated by an AI.
+- **Temperature**
+    - You can think of temperature as the **degree of exploration or randomness** of the model. Think back to the *autocomplete* analogy of LLMs.
+    - When `temperature=0`, the model will always select the most likely next word. This is useful when you want predictable responses.
+    - When `temperature>0`, the model will occasionally sample from the distribution of next words. This is useful when you want creative or varying responses.
