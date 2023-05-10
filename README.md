@@ -11,7 +11,7 @@
         - These **predict the next word** based on the training data.
         - They are essentially highy advanced autocompletes.
         - They are trained on extremely large amounts of data (think all documented human knowledge).
-    - **Instruction tuned LLMs** (e.g ChatGPT)
+    - **Instruction tuned LLMs** (e.g `gpt-3.5-turbo`)
         - These **try to follow instructions** rather than just predict the next word.
         - To train this, you would start with a base LLM and train it further using *good* instruction-answer pairs.
         - You could also further fine tune it using reinforcement learning with human feedback (RLHF).
@@ -66,3 +66,8 @@
     - You can think of temperature as the **degree of exploration or randomness** of the model. Think back to the *autocomplete* analogy of LLMs.
     - When `temperature=0`, the model will always select the most likely next word. This is useful when you want predictable responses.
     - When `temperature>0`, the model will occasionally sample from the distribution of next words. This is useful when you want creative or varying responses.
+
+### Custom Chatbot
+- The Chat API can also take in a list of messages to create a chatbot that is context-aware.
+- Information about the chatbots role can be passed via a `system` message (see the notebook for more details).
+- It is important to let users know that they are interacting with an AI and not a human, especially since these language models are prone to hallucinations and can provide users with incorrect information.
